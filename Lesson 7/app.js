@@ -1,4 +1,6 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:create, update:update});
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '',
+	{preload:preload, create:create, update:update});
+
 var score = 0;
 var life = 3;
 
@@ -93,7 +95,8 @@ function update() {
 		player.body.velocity.x=-150;
 		player.animations.play('left');
 	}
-F			else if(cursors.right.isDown){
+
+			else if(cursors.right.isDown){
 		// Move right
 		player.body.velocity.x=150;
 		player.animations.play('right');
