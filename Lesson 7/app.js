@@ -1,6 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '',
-	{preload:preload, create:create, update:update});
-
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:create, update:update});
 var score = 0;
 var life = 3;
 
@@ -34,7 +32,7 @@ function create() {
 	var style = {font: "bold 32px Arial", fill: "#fff"}
 	// Positioning the score
 	scorelabel = game.add.text(300,560, "Score: ", style);
-	scroetext = game.add.text(420, 560, score,style);
+	scoretext = game.add.text(420, 560, score,style);
 	scorelabel.setShadow(3,3,'rgba(0,0,0,0.5)',2);
 	scoretext.setShadow(3,3,'rgba(0,0,0,0.5)',2);
 	
@@ -95,8 +93,7 @@ function update() {
 		player.body.velocity.x=-150;
 		player.animations.play('left');
 	}
-
-			else if(cursors.right.isDown){
+F			else if(cursors.right.isDown){
 		// Move right
 		player.body.velocity.x=150;
 		player.animations.play('right');
